@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Motivation</string>
+    <string name="text_center">Phrase</string>
+    <string name="text_top">Hello," "</string>
+    <string name="text_buttonNovaFrase">New phrase</string>
+
+    <!--Strings Activity 1-->
+    <string name="textComeçar">Let\'s get started?</string>
+    <string name="hintSeuNome">What\'s your name?</string>
+    <string name="buttonSalvar">Save</string>
+
+    <!--String Toast-->
+    <string name="digiteNome">Inform your name</string>
+
+</resources>

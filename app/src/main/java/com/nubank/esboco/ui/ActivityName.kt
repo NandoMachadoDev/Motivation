@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.nubank.esboco.R
-import com.nubank.esboco.data.Mock
+import com.nubank.esboco.repository.Mock
 import com.nubank.esboco.infra.MotivationConstants
 import com.nubank.esboco.infra.SecurityPreferences
 import com.nubank.esboco.databinding.ActivityNameBinding
+import java.util.Locale
 
 class ActivityName : AppCompatActivity(), View.OnClickListener {
 
@@ -50,7 +51,8 @@ class ActivityName : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleNextFrase() {
-        binding.textFraseCenter.text = Mock().getFrases(filter)
+        Locale.getDefault().language
+        binding.textFraseCenter.text = Mock().getFrases(filter, Locale.getDefault().language)
     }
 
     private fun handleFilter(id: Int) {
@@ -78,7 +80,7 @@ class ActivityName : AppCompatActivity(), View.OnClickListener {
 
     private fun handleUserName() {
         val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
-        binding.textKotlin.text = "Olá, $name!"
+        binding.textKotlin.text = getString(R.string.text_top)+ "" + name
     }
 
 }
